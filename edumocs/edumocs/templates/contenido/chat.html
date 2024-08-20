@@ -1,0 +1,232 @@
+{% extends "contenido/BaseNavBar.html" %}
+{% block titulo %}Foro{% endblock titulo %}
+
+{% block contenido %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            margin-top: 70px; /* Agrega margen superior para el navbar */
+        }
+
+        .faq {
+            width: 30%;
+            border: 1px solid rgba(0, 0, 0, 0.1); /* Bordes sutiles */
+            padding: 10px;
+            max-width: 600px; /* Ajusta esto según sea necesario */
+            margin: 0 auto;
+            overflow: hidden; /* Ocultar contenido desbordante */
+        }
+
+        .faq h2 {
+            margin: 0;
+            padding: 10px 0;
+        }
+
+        .faq-items-wrapper {
+            max-height: 500px; /* Ajusta esto según sea necesario */
+            overflow-y: scroll; /* Barra de desplazamiento vertical */
+            padding-right: 15px; /* Espacio para la barra de desplazamiento */
+        }
+
+        .faq-items-wrapper::-webkit-scrollbar {
+            width: 8px; /* Ancho de la barra de desplazamiento */
+        }
+
+        .faq-items-wrapper::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, 0.2); /* Color de la barra de desplazamiento */
+            border-radius: 4px; /* Bordes redondeados de la barra de desplazamiento */
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-item button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            text-align: left;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .faq-item button svg {
+            margin-left: auto;
+        }
+
+        .faq-item .content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            margin-top: 10px;
+            font-weight: normal; /* Se mantiene el peso normal para las respuestas */
+        }
+
+        .chat-container {
+            position: sticky;
+            width: 65%;
+            height: 600px; /* Ajusta esto al tamaño que necesites */
+            background-color: #ffecec;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-y: auto; /* Añade scroll en caso de que el contenido sea mayor que el tamaño fijo */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .chat-box {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+
+        .chat-box.user {
+            background-color: #d8ecff;
+            border-radius: 10px 10px 0 0; /* Redondea las esquinas superior */
+            max-width: 50%; /* Reduce el ancho del recuadro */
+        }
+
+        .chat-box.admin {
+            background-color: #fffcc9;
+            border-radius: 0 0 10px 10px; /* Redondea las esquinas inferior */
+            max-width: 50%; /* Reduce el ancho del recuadro */
+            margin-left: 350px; /* Elimina el margen derecho */
+        }
+
+        .chat-input {
+            display: flex;
+            margin-top: auto; /* Asegura que el cuadro de entrada esté en la parte inferior */
+            width: 100%;
+        }
+
+        .chat-input input {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .chat-input button {
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chat-input button svg {
+            fill: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="faq">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="faq-items-wrapper">
+                <div class="faq-item">
+                    <button onclick="toggleContent(0)">
+                        <strong>¿Cuándo comienzan los cursos?</strong>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                        </svg>
+                    </button>
+                    <div class="content">Las fechas de inicio de cada curso están especificadas en la descripción del curso en el catálogo. Asegúrate de revisar las fechas antes de inscribirte.</div>
+                </div>
+                <div class="faq-item">
+                    <button onclick="toggleContent(1)">
+                        <strong>¿Qué requisitos se necesitan para tomar los cursos?</strong>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                        </svg>
+                    </button>
+                    <div class="content">Los requisitos para cada curso se especifican en la descripción del curso en el catálogo. Asegúrate de revisar los requisitos antes de inscribirte.</div>
+                </div>
+                <div class="faq-item">
+                    <button onclick="toggleContent(2)">
+                        <strong>¿Cómo puedo pagar por los cursos?</strong>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                        </svg>
+                    </button>
+                    <div class="content">Puedes pagar por los cursos a través de nuestra plataforma de pago en línea. Aceptamos las principales tarjetas de crédito y débito.</div>
+                </div>
+                <div class="faq-item">
+                    <button onclick="toggleContent(3)">
+                        <strong>¿Qué pasa si no puedo asistir a una clase?</strong>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                        </svg>
+                    </button>
+                    <div class="content">Ponte en contacto con nosotros lo antes posible para informarnos sobre tu ausencia. Intentaremos ayudarte a recuperar la información que te hayas perdido.</div>
+                </div>
+                <div class="faq-item">
+                    <button onclick="toggleContent(4)">
+                        <strong>¿Puedo obtener un reembolso si cambio de opinión?</strong>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                        </svg>
+                    </button>
+                    <div class="content">Nuestra política de reembolsos varía según el curso y el momento de la solicitud. Por favor, revisa nuestra política de reembolsos en el sitio web o contacta con nuestro soporte para más información.</div>
+                </div>
+            </div>
+        </div>
+        <div class="chat-container">
+            <div id="chat-box" class="chat-box-container">
+                <div class="chat-box user">
+                    <p>Hola, necesito ayuda con el curso.</p>
+                </div>
+                <div class="chat-box admin">
+                    <p>¡Hola! ¿En qué puedo ayudarte?</p>
+                </div>
+                
+            </div>
+            <form class="chat-input">
+                <input type="text" placeholder="Escribe tu mensaje...">
+                <button type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send-check-fill" viewBox="0 0 16 16">
+                        <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 1.59 2.498C8 14 8 13 8 12.5a4.5 4.5 0 0 1 5.026-4.47zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z"/>
+                        <path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686"/>
+                      </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function toggleContent(index) {
+            const contents = document.querySelectorAll('.faq-item .content');
+            contents[index].style.display = contents[index].style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
+{% endblock contenido %}

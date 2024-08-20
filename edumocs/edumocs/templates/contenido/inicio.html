@@ -1,0 +1,221 @@
+{% extends "contenido/BaseNavBar.html" %}
+{% block titulo %}Inicio{% endblock titulo %}
+{% block contenido %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'edumocs/css/styles1.css' %}">
+
+<body>
+    <P class="negrita2" >UNA AMPLIA SELECCION DE CURSOS<P>
+        <p class="sub" style="font-size: 15px;">
+            Elige entre más de 220 000 cursos de vídeo en línea con nuevo contenido cada mes.<br>
+            Instructores de todo el mundo enseñan a millones de estudiantes en Udemy. Proporcionamos las herramientas y las habilidades para que enseñes lo que te apasiona.
+        </p>
+
+    <section >
+        <div id="carouselExampleCaptions" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="border:none;"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2" style="border:none;"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" style="border:none;"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4" style="border:none;"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5" style="border:none;"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="d-flex flex-column align-items-center">
+                <img src="{% static 'edumocs/images/java.jpg' %}"  style="width: 800px; height: 500; margin-bottom: 140px; margin-top: 80px; ">
+                <div class="carousel-caption text-center">
+                    <div class="contenedor">
+                        <div class="texto-izquierda" style="margin-left:-80px;">
+                            Curso de Java (Avanzado)<br>
+                            $159.00
+                        </div>
+                        <div class="texto-derecha">
+                            <div class="rating" style="color:yellow;font-size: 30px; ">
+                                ★★★★☆
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-flex flex-column align-items-center">
+                <img src="{% static 'edumocs/images/python.jpg' %}" style="width: 800px; height: 500; margin-bottom: 140px; margin-top: 80px;">
+                <div class="carousel-caption text-center">
+                    <div class="contenedor">
+                        <div class="texto-izquierda" style="margin-left:-80px;">
+                            Curso de Java para principiantes<br>
+                            $230.00
+                        </div>
+                        <div class="texto-derecha">
+                            <div class="rating" style="color:yellow;font-size: 30px; ">
+                                ★★★★★
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-flex flex-column align-items-center">
+                  <img src="{% static 'edumocs/images/react.jpg' %}" style="width: 800px; height: 500; margin-bottom: 140px; margin-top: 80px;">
+                  <div class="carousel-caption text-center">
+                      <div class="contenedor">
+                          <div class="texto-izquierda" style="margin-left:-80px;">
+                              Curso de React Native<br>
+                              $270.00
+                          </div>
+                          <div class="texto-derecha">
+                              <div class="rating" style="color:yellow;font-size: 30px; ">
+                                  ★★★★★
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-flex flex-column align-items-center">
+                  <img src="{% static 'edumocs/images/web.jpg' %}" style="width: 800px; height: 500; margin-bottom: 160px; margin-top: 80px;">
+                  <div class="carousel-caption text-center">
+                      <div class="contenedor">
+                          <div class="texto-izquierda" style="margin-left:-80px;">
+                            Desarrollo Web Completo con HTML5, CSS3, JS, PHP y MySQL<br>
+                              $230.00
+                          </div>
+                          <div class="texto-derecha">
+                              <div class="rating" style="color:yellow;font-size: 30px; ">
+                                  ★★★★★
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            <div class="carousel-item">
+              <div class="d-flex flex-column align-items-center">
+                <img src="{% static 'edumocs/images/bd.jpg' %}" style="width: 800px; height: 500; margin-bottom: 140px; margin-top: 80px;" >
+                <div class="carousel-caption text-center">
+                    <div class="contenedor">
+                        <div class="texto-izquierda" style="margin-left:-80px;">
+                            Curso de Java para principiantes<br>
+                            $1400.00
+                        </div>
+                        <div class="texto-derecha">
+                            <div class="rating" style="color:yellow;font-size: 30px; ">
+                                ★★★☆☆
+                            </div>
+                        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev" style="background-color:white; border:none;">
+            <span class="carousel-control-custom" aria-hidden="true" style="display: inline-block; width: 30px; height: 30px; background-color: black; border-radius: 50%; color: white; text-align: center; line-height: 30px; font-size: 20px;">
+                ❮
+            </span>
+            
+            
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next" style="background-color:white; border:none;">
+            <span class="carousel-control-custom" aria-hidden="true" style="display: inline-block; width: 30px; height: 30px; background-color: black; border-radius: 50%; color: white; text-align: center; line-height: 30px; font-size: 20px; ">
+                ❯
+            </span>
+          </button>
+        </div>
+      </section>
+          <!-- Scripts -->
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <section class="promo">
+
+        <p>
+            En Edumoks, entendemos que el mundo de la tecnología está en constante evolución y que la demanda de habilidades 
+            en programación nunca ha sido tan alta. Es por eso que estamos dedicados a ofrecerte una amplia gama de cursos 
+            de programación diseñados para satisfacer tus necesidades, ya sea que estés dando tus primeros pasos en el mundo
+            de la codificación o que busques perfeccionar tus habilidades existentes.
+            Desarrolla las habilidades de tu equipo<br>
+            Acceso ilimitado a más de 28,000 de los mejores cursos de Udemy en cualquier momento y lugar.<br>
+            Colección internacional de cursos en 14 idiomas<br>Las certificaciones más populares en tecnología y empresas</p>
+    </section>
+    <P class="negrita" >Nuestros cursos mas populares<P>
+
+    <section class="courses">
+        <div class="course">
+            <a href="http://127.0.0.1:8000/curso/21/">
+            <img src="{% static 'edumocs/images/jsIn.png' %}" alt="Curso de JS" onclick="redirectToCourse()">
+            <p><a href="  " onclick="redirectToCourse()">JavaScript para principiantes</a></p>
+            <div class="rating">
+                ★★★★☆
+            </div>
+            <p>$250.00</p>
+        </div>
+        <div class="course">
+            <a href="http://127.0.0.1:8000/curso/22/">
+            <img src="{% static 'edumocs/images/kotlin.png' %}" alt="Curso de JS" onclick="redirectToCourse()">
+            <p><a href="  " onclick="redirectToCourse()">JavaScript para principiantes</a></p>
+            <div class="rating">
+                ★★★☆☆
+            </div>
+            <p>$180.00</p>
+        </div>
+        <div class="course">
+            <a href="http://127.0.0.1:8000/curso/19/">
+            <img src="{% static 'edumocs/images/laravel.jpeg' %}" alt="Curso de Laravel" onclick="redirectToCourse()">
+            <p><a href="  " onclick="redirectToCourse()">Curso de Laravel</a></p>
+            <div class="rating">
+                ★★★☆☆
+            </div>
+            <p>$270.00</p>
+        </div>
+        <div class="course">
+            <a href="http://127.0.0.1:8000/curso/23/">
+            <img src="{% static 'edumocs/images/php.png' %}" alt="Curso de php" onclick="redirectToCourse()">
+            <p><a href="  " onclick="redirectToCourse()">Curso completo de php</a></p>
+            <div class="rating">
+                ★★★★★
+            </div>
+            <p>$300.00</p>
+        </div>
+        <div class="course">
+            <a href="http://127.0.0.1:8000/curso/24/">
+            <img src="{% static 'edumocs/images/web.jpg' %}" alt="Curso de pagWeb" onclick="redirectToCourse()">
+            <p><a href="  " onclick="redirectToCourse()">Desarrollo Web Completo con HTML5, CSS3, JS AJAX PHP y MySQL</a></p>
+            <div class="rating">
+                ★★★★★
+            </div>
+            <p>$230.00</p>
+        </div>
+        <div class="course">
+            <a href="http://127.0.0.1:8000/curso/20/">
+            <img src="{% static 'edumocs/images/swift.jpg' %}" alt="Curso de swift" onclick="redirectToCourse()" >
+            <p><a href="  " onclick="redirectToCourse()">Curso completo de Swift</a></p>
+            <div class="rating">
+                ★★★★★
+            </div>
+            <p>$350.00</p>
+        </div>
+        
+        
+        
+        
+    </section>
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    {% load static %}
+    <script src="{%static 'edumocs/js/scripts.js' %}"></script>
+</body>
+
+{% endblock contenido %}
+
+ {% block foter %}{% endblock foter %}
+
+</html>

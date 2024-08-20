@@ -1,0 +1,55 @@
+{% extends "contenido/BaseNavBar.html" %}
+
+<title>{% block titulo %} Pre-Inscripcion {% endblock %}</title>
+{% load static %}
+{% block contenido %}
+
+<p style="font-size:50px; text-align:center; margin-top:40px;"><strong>PRE-Inscripcion</strong></p>
+
+<div class="container" style="background:#D6D6D6; border-radius:20px; text-align: center; margin-top:40px; margin-bottom:40px;">
+   <div class="button-back" style="text-align:left; margin-left:20px; margin-top:20px;">
+      <button type="button" class="btn btn-secondary" onclick="history.back()" style="font-size: 28px; padding: 10px 20px; border-radius: 30px; background:#FF5D55;"> X </button>
+   </div>
+
+   <img src="{% static 'edumocs/images/logoSl.png' %}" width="300" height="auto" style="width: 300px; height: auto; margin-top:40px;">
+
+   <form class="form-horizontal" action="{% url 'PreInscripcion' %}" method="POST" role="form">
+      {% csrf_token %}
+      <div class="form" style="width: 500px; height: auto; text-align: center; margin: 0 auto; margin-bottom:30px; margin-top:50px;">
+         
+         <!-- Nombre -->
+         <input type="text" id="id_nombre" name="nombre" placeholder="Ingresa tu nombre" style="width: 500px; height:50px; padding: 10px; border-radius: 5px; margin-bottom:30px; font-size: 18px;" value="{{ form.nombre.value|default:'' }}">
+
+         <!-- Correo -->
+         <input type="text" id="id_correo" name="correo" placeholder="Ingresa tu correo electrónico" style="width: 500px; height:50px; padding: 10px; border-radius: 5px; margin-bottom:30px; font-size: 18px;" value="{{ form.correo.value|default:'' }}">
+
+         <!-- Curso -->
+         <label for="id_curso" style="margin-top: 30px; font-size: 18px;">Selecciona un curso:</label><br>
+         <select id="id_curso" name="curso" style="width: 390px; padding: 15px; font-size: 18px;">
+            <option value="opcion1" {% if form.curso.value == 'opcion1' %}selected{% endif %}>Curso de python</option> <!-- Esta línea asegura que el valor correcto esté seleccionado en el menú desplegable basándose en el valor actual del formulario-->
+            <option value="opcion2" {% if form.curso.value == 'opcion2' %}selected{% endif %}>Introduccion a laravel</option>
+            <option value="opcion3" {% if form.curso.value == 'opcion3' %}selected{% endif %}>Curso completo de Swift</option>
+            <option value="opcion4" {% if form.curso.value == 'opcion4' %}selected{% endif %}>Curso de Java para Principiantes</option>
+            <option value="opcion5" {% if form.curso.value == 'opcion5' %}selected{% endif %}>Ccurso de kotlin (Principiante)</option>
+            <option value="opcion6" {% if form.curso.value == 'opcion6' %}selected{% endif %}>Desarrollo Web Completo con HTML5, CSS3, JS AJAX PHP y MySQL</option>
+         </select>
+
+         <!-- Error handling -->
+         {% if form.nombre.errors %}
+            <div class="alert alert-danger">{{ form.nombre.errors }}</div>
+         {% endif %}
+         {% if form.correo.errors %}
+            <div class="alert alert-danger">{{ form.correo.errors }}</div>
+         {% endif %}
+         {% if form.curso.errors %}
+            <div class="alert alert-danger">{{ form.curso.errors }}</div>
+         {% endif %}
+
+         <!-- Submit button -->
+         <button type="submit" class="btn btn-primary" style="margin-top:40px; width:150px; font-size:20px; margin-bottom:40px; background:#4DD7FA;">Enviar</button>
+         
+      </div>
+   </form>
+
+</div>
+{% endblock %}
