@@ -1,0 +1,28 @@
+{% extends "contenido/BaseNavBar.html" %}
+
+<title>{% block titulo %} CURSOS {% endblock %}</title>
+
+{% block contenido %}
+<h1 style="text-align:center; padding-bottom:10px; padding-top:40px; font-size: 40px;">Busca una carrera ideal para ti</h1>
+<h5 style="text-align:center; padding-bottom:40px;">Independientemente de cuáles sean tus intereses o antecedentes, con los Certificados profesionales estás cubierto.</h5>
+
+<div class="container" style="background-color: #D2D7DB; border-radius: 10px; padding: 20px;">
+  {% for curso in cursos %}
+  <div class="row" style="margin-bottom: 40px;">
+    <!-- Columna de imagen -->
+    <div class="col-md-6">
+      <a href="{% url 'curso_detalle' id=curso.id %}">
+        <img src="{{ curso.imagen.url }}" style="width: 100%; height: auto; border-radius: 20px; margin-bottom: 20px;">
+      </a>
+    </div>
+    <!-- Columna de texto -->
+    <div class="col-md-6 d-flex flex-column justify-content-center">
+      <h2 style="font-size: 30px; margin-bottom: 10px;"><strong>{{ curso.nombreCurso }}</strong></h2>
+      <p style="font-size: 15px; line-height: 1.6; text-align: justify;">{{ curso.des }}</p>
+      <p style="font-size: 27px; color:#000000; margin-top: 20px;">{{ curso.calificacion }}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

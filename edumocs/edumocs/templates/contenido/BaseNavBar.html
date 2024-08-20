@@ -1,0 +1,162 @@
+{% block navbar %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %}{% endblock titulo %}</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'edumocs/css/styles1.css'%}">
+    <link href="{%static 'inicio/css/bootstrap.min.css'%}" rel="stylesheet" type="text/css">
+    <link href="{%static 'inicio/css/londinium-theme.css'%}" rel="stylesheet" type="text/css">
+    <link href="{%static 'inicio/css/styles.css'%}" rel="stylesheet" type="text/css">
+    <link href="{%static 'inicio/css/icons.css'%}" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    
+    <script type="text/javascript" src="js/plugins/charts/sparkline.min.js"></script>
+    
+    <script type="text/javascript" src="js/plugins/forms/uniform.min.js"></script>
+    <script type="text/javascript" src="js/plugins/forms/select2.min.js"></script>
+    <script type="text/javascript" src="js/plugins/forms/inputmask.js"></script>
+    <script type="text/javascript" src="js/plugins/forms/autosize.js"></script>
+    <script type="text/javascript" src="js/plugins/forms/inputlimit.min.js"></script>
+    <script type="text/javascript" src="js/plugins/forms/listbox.js"></script>
+    <script type="text/javascript" src="js/plugins/forms/multiselect.js"></script>
+    <script type="text/javascript" src="js/plugins/forms/validate.min.js"></script>
+    <script type="text/javascript" src="js/plugins/forms/tags.min.js"></script>
+    <script type="text/javascript" src="js/plugins/forms/switch.min.js"></script>
+    
+    <script type="text/javascript" src="js/plugins/forms/uploader/plupload.full.min.js"></script>
+    <script type="text/javascript" src="js/plugins/forms/uploader/plupload.queue.min.js"></script>
+    
+    <script type="text/javascript" src="js/plugins/forms/wysihtml5/wysihtml5.min.js"></script>
+    <script type="text/javascript" src="js/plugins/forms/wysihtml5/toolbar.js"></script>
+    
+    <script type="text/javascript" src="js/plugins/interface/daterangepicker.js"></script>
+    <script type="text/javascript" src="js/plugins/interface/fancybox.min.js"></script>
+    <script type="text/javascript" src="js/plugins/interface/moment.js"></script>
+    <script type="text/javascript" src="js/plugins/interface/jgrowl.min.js"></script>
+    <script type="text/javascript" src="js/plugins/interface/datatables.min.js"></script>
+    <script type="text/javascript" src="js/plugins/interface/colorpicker.js"></script>
+    <script type="text/javascript" src="js/plugins/interface/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="js/plugins/interface/timepicker.min.js"></script>
+    
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/application.js"></script>
+</head>
+<style>
+    /* Estilos generales */
+  
+    
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    
+    .content {
+        flex: 1;
+    }
+
+    .footer {
+        background: #282c34;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .footer-text p {
+        margin: 0;
+    }
+
+    .footer-social a {
+        margin: 0 10px;
+    }
+
+    .footer-social img {
+        width: 24px;
+        height: 24px;
+    }
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light">
+    
+        <img src="{%static '/edumocs/images/logo.png'%}" width="100" height="auto" class="d-inline-block align-top" style="margin-left:20; margin-right:30px;">
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav" >
+        <ul class="navbar-nav mr-auto"  >
+            <li class="nav-item">
+                <a class="nav-link" href="{% url "inicio" %}" style="font-size:20px; margin-right:5px">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url "Acercade" %}" style="font-size:20px; margin-right:5px">Sobre nosotros</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url "Cursos" %}" style="font-size:20px; margin-right:5px">Cursos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url "Preguntas" %}" style="font-size:20px; margin-right:5px">Preguntas Frecuentes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url "chat" %}" style="font-size:20px; margin-right:5px">Foro</a>
+            </li>
+        </ul>
+        <a href="{% url 'admin:index' %}" class="btn btn-modern" style="background-color: #727272;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; 
+    margin-right:1px;
+    float:right;">
+    Acceder
+</a>
+
+    </div>
+</nav>
+
+
+{% endblock navbar %}
+
+
+
+{% block contenido %}{% endblock contenido %}
+</body>
+<footer class="footer" style="background:#282c34;
+            
+            padding-bottom:-900 px;
+            text-align: center;
+            margin-bottom: 0;
+            display: flex;
+            margin: 0 auto;
+
+            ">
+    <div class="footer-content">
+        <div class="footer-text">
+            <p style="color:white;">Obtén el conocimiento y la calidad que necesitas para continuar con tu carrera profesional y lo que necesitas al alcance de un botón. Pre-orden ahora.</p>
+            <p style="color:white;">Copyright © 2024 Edumocs. Todos los derechos reservados.</p>
+        </div>
+        <div class="footer-social">
+            <a href="#" class="social-icon"><img src="{%static '/edumocs/images/facebook.png'%}" alt="Facebook"></a>
+            <a href="#" class="social-icon"><img src="{%static '/edumocs/images/twitter.png'%}" alt="Twitter"></a>
+            <a href="#" class="social-icon"><img src="{%static '/edumocs/images/instagram.png'%}" alt="Instagram"></a>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,170 @@
+{% extends "contenido/BaseNavBar.html" %}
+{% block titulo %}Inicio{% endblock titulo %}
+{% block contenido %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'edumocs/css/styles1.css' %}">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Preguntas Recientes</title>
+  <!--LINKS-->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container" style="background-color: #A1D2EC; border-radius:40px; padding-bottom:40px; margin-top:80px; margin-bottom:80px; ;">
+      <p style="text-align:center; font-size:30px; padding-bottom:30px;"><strong>PREGUNTAS FRECUENTES</strong></p>
+      
+      <div class="d-flex justify-content-center">
+        <div class="row">
+          
+          
+          <!-- Columna 1 -->
+          <div class="col-md-4">
+            <a class="btn btn-primary w-100 mb-4" data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1" style="background:#646B6F; font-size:19px; height:70px; white-space: normal; display: flex; align-items: center; justify-content: center; border:none;"><strong>¿Qué tipos de cursos ofrece Edu Moocs?</strong></a>
+            <div class="collapse w-100" id="collapseExample1">
+              <div class="card card-body" style="margin-bottom:15px; font-size:15px; justify-content: justify; background:#C2CED5; color:black;">Edu Moocs ofrece cursos académicos virtuales en diversas áreas de Tecnologías de la Información, como Redes, Programación, Gestión de proyectos de TI, y Animación.</div>
+            </div>
+    
+            <a class="btn btn-primary w-100 mb-4" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2" style="background:#646B6F; font-size:19px; height:70px; white-space: normal; display: flex; align-items: center; justify-content: center; border:none;"><strong>¿Cómo puedo inscribirme en un curso?</strong></a>
+            <div class="collapse w-100" id="collapseExample2">
+              <div class="card card-body" style="margin-bottom:15px; font-size:15px; justify-content: justify; background:#C2CED5; color:black;">Para inscribirte en un curso, visita el catálogo de cursos disponibles, selecciona el curso de tu interés y completa el formulario de pre-inscripción con tus datos personales.</div>
+            </div>
+    
+            <a class="btn btn-primary w-100 mb-4" data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3" style="background:#646B6F; font-size:19px; height:70px; white-space: normal; display: flex; align-items: center; justify-content: center; border:none;" ><strong>¿Cuáles son los requisitos para tomar un curso?</strong></a>
+            <div class="collapse w-100" id="collapseExample3">
+              <div class="card card-body" style="margin-bottom:15px; font-size:15px; justify-content: justify; background:#C2CED5; color:black;">Los requisitos varían según el curso. Generalmente, se espera que los participantes tengan conocimientos básicos en el área del curso. Consulta la descripción de cada curso para obtener detalles específicos.</div>
+            </div>
+    
+            <a class="btn btn-primary w-100 mb-4" data-bs-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample4" style="background:#646B6F; font-size:19px; height:70px; white-space: normal; display: flex; align-items: center; justify-content: center; border:none;"><strong>¿Cómo puedo gestionar los cursos como administrador?</strong></a>
+            <div class="collapse w-100" id="collapseExample4">
+              <div class="card card-body" style="margin-bottom:15px; font-size:15px; justify-content: justify; background:#C2CED5; color:black;">Los administradores pueden gestionar los cursos a través de un panel de administración donde pueden añadir, modificar, o eliminar cursos, así como actualizar la información de cada curso, incluyendo nombre, descripción, costo, fechas, duración y estado.</div>
+            </div>
+          </div>
+    
+          <!-- Columna 2 -->
+          <div class="col-md-4">
+            <a class="btn btn-primary w-100 mb-4" data-bs-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample5" style="background:#646B6F; font-size:19px; height:70px; white-space: normal; display: flex; align-items: center; justify-content: center; border:none;"><strong>¿Qué información se requiere para la pre-inscripción?</strong></a>
+            <div class="collapse w-100" id="collapseExample5">
+              <div class="card card-body" style="margin-bottom:15px; font-size:15px; justify-content: justify; background:#C2CED5; color:black;">Para la pre-inscripción, se requiere que el usuario proporcione su nombre, correo electrónico, teléfono, ciudad y estado.</div>
+            </div>
+    
+            <a class="btn btn-primary w-100 mb-4" data-bs-toggle="collapse" href="#collapseExample6" role="button" aria-expanded="false" aria-controls="collapseExample6" style="background:#646B6F; font-size:19px; height:70px; white-space: normal; display: flex; align-items: center; justify-content: center; border:none;"><strong>¿Puedo obtener un certificado al finalizar el curso?</strong></a>
+            <div class="collapse w-100" id="collapseExample6">
+              <div class="card card-body" style="margin-bottom:15px; font-size:15px; justify-content: justify; background:#C2CED5; color:black;">Sí, todos los cursos de Edu Moocs ofrecen un certificado de finalización que puede ser descargado una vez que hayas completado todos los requisitos del curso.</div>
+            </div>
+    
+            <a class="btn btn-primary w-100 mb-4" data-bs-toggle="collapse" href="#collapseExample7" role="button" aria-expanded="false" aria-controls="collapseExample7" style="background:#646B6F; font-size:19px; height:70px; white-space: normal; display: flex; align-items: center; justify-content: center; border:none;"><strong>¿Cómo puedo contactar con el soporte si tengo problemas?</strong></a>
+            <div class="collapse w-100" id="collapseExample7">
+              <div class="card card-body" style="margin-bottom:15px; font-size:15px; justify-content: justify; background:#C2CED5; color:black;">Si tienes algún problema o pregunta, puedes contactar con nuestro soporte a través del formulario de contacto en la página web o enviando un correo a soporte@edumoocs.com.</div>
+            </div>
+    
+            <a class="btn btn-primary w-100 mb-4" data-bs-toggle="collapse" href="#collapseExample8" role="button" aria-expanded="false" aria-controls="collapseExample8" style="background:#646B6F; font-size:19px; height:70px; white-space: normal; display: flex; align-items: center; justify-content: center; border:none;"><strong>¿Puedo ver cuántas personas están inscritas en un curso?</strong></a>
+            <div class="collapse w-100" id="collapseExample8">
+              <div class="card card-body" style="margin-bottom:15px; font-size:15px; justify-content: justify; background:#C2CED5; color:black; ">Sí, al seleccionar un curso en el catálogo, se mostrará la cantidad de personas que están registradas en el mismo.</div>
+            </div>
+          </div>
+    
+          <!-- Columna 3 -->
+          <div class="col-md-4">
+            <a class="btn btn-primary w-100 mb-4" data-bs-toggle="collapse" href="#collapseExample9" role="button" aria-expanded="false" aria-controls="collapseExample9" style="background:#646B6F; font-size:19px; height:70px; white-space: normal; display: flex; align-items: center; justify-content: center; border:none;"><strong>¿Hay algún costo asociado a los cursos?</strong></a>
+            <div class="collapse w-100" id="collapseExample9">
+              <div class="card card-body" style="margin-bottom:15px; font-size:15px; justify-content: justify; background:#C2CED5; color:black;">Sí, cada curso tiene un costo que está detallado en la descripción del curso en el catálogo. El costo varía dependiendo del contenido y la duración del curso.</div>
+            </div>
+    
+            <a class="btn btn-primary w-100 mb-4" data-bs-toggle="collapse" href="#collapseExample10" role="button" aria-expanded="false" aria-controls="collapseExample10" style="background:#646B6F; font-size:19px; height:70px; white-space: normal; display: flex; align-items: center; justify-content: center; border:none;"><strong>¿Puedo cancelar mi inscripción a un curso?</strong></a>
+            <div class="collapse w-100" id="collapseExample10">
+              <div class="card card-body" style="margin-bottom:15px; font-size:15px; justify-content: justify; background:#C2CED5; color:black;">Sí, puedes cancelar tu inscripción a un curso contactando al soporte antes de la fecha de inicio del curso. Revisa nuestra política de cancelación para más detalles.</div>
+            </div>
+    
+            <a class="btn btn-primary w-100 mb-4" data-bs-toggle="collapse" href="#collapseExample11" role="button" aria-expanded="false" aria-controls="collapseExample11" style="background:#646B6F; font-size:19px; height:70px; white-space: normal; display: flex; align-items: center; justify-content: center; border:none;"><strong>¿Qué funcionalidad adicional ofrece Edu Moocs?</strong></a>
+            <div class="collapse w-100" id="collapseExample11">
+              <div class="card card-body" style="margin-bottom:15px; font-size:15px; justify-content: justify; background:#C2CED5; color:black;">Además de los cursos y el formulario de pre-inscripción, Edu Moocs ofrece una funcionalidad de foros donde los estudiantes pueden interactuar, discutir temas del curso y ayudarse mutuamente.</div>
+            </div>
+    
+            <a class="btn btn-primary w-100 mb-4" data-bs-toggle="collapse" href="#collapseExample12" role="button" aria-expanded="false" aria-controls="collapseExample12" style="background:#646B6F; font-size:19px; width:100px; height:70px; white-space: normal; display: flex; align-items: center; justify-content: center; border:none;"><strong>¿Cuándo comienzan los cursos?</strong></a>
+            <div class="collapse w-100" id="collapseExample12">
+              <div class="card card-body" style="margin-bottom:15px; font-size:15px; justify-content: justify; background:#C2CED5; color:black;">Las fechas de inicio de cada curso están especificadas en la descripción del curso en el catálogo. Asegúrate de revisar las fechas antes de inscribirte.</div>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+    
+    
+
+
+    <!--COMENTARIOS-->
+    <section style="background-color:#CBCAC9;">
+      <h1 style="text-align:center; padding-top:20px; background:#CBCAC9;">COMENTARIOS</h1>
+      <div id="carouselExampleCaptions" class="carousel slide" style="background:#CBCAC9;">
+        
+        <div class="carousel-indicators">
+          
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="background:#CBCAC9;"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2" style="background:#CBCAC9;"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" style="background:#CBCAC9;"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-flex flex-column align-items-center">
+             
+              <img src="{% static 'edumocs/images/perfil1h.jpg' %}" class="rounded-circle" style="width: 200px; height: 200px; margin-bottom: 230px; margin-top: 80px;">
+              <div class="carousel-caption text-center">
+                <h5 style="background:#CBCAC9; font-size:25; color:black;">German Oseguera</h5>
+                <p style="font-size:20px; color:black;">Estoy sumamente satisfecho con los cursos educativos desarrollados.<br>
+                   La plataforma es intuitiva, los contenidos son de alta calidad y los instructores estan claramente bien preparados.<br>
+                   Gracias a sus cursos, he podido avanzar significativamente en mi formacion y alcanzar mis objetivos.</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex flex-column align-items-center">
+              <img src="{% static 'edumocs/images/perfil4m.jpg' %}" class="rounded-circle" style="width: 200px; height: 200px; margin-bottom: 230px; margin-top: 80px;">
+              <div class="carousel-caption text-center">
+                <h5 style="background:#CBCAC9; font-size:25; color:black;">Fernanda Garcia</h5>
+                <p style="font-size:20px; color:black;">Los cursos ofrecidos en esta plataforma han superado mis expectativas.<br>
+                  La interfaz es fácil de usar, el contenido es muy completo y los profesores son excelentes.<br>
+                  He aprendido muchísimo y me siento más preparado para enfrentar nuevos desafíos profesionales.</p>
+               
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex flex-column align-items-center">
+              <img src="{% static 'edumocs/images/perfil5m.jpg' %}" class="rounded-circle" style="width: 200px; height: 200px; margin-bottom: 230px; margin-top: 80px;" >
+              <div class="carousel-caption text-center">
+                <h5 style="background:#CBCAC9; font-size:25; color:black;">Luisa Rojas</h5>
+                <p style="font-size:20px; color:black;">El diseño de la plataforma es impresionante y muy fácil de navegar.<br>
+                  La estructura del sitio es clara y los colores son agradables a la vista, lo que hace que el aprendizaje sea una experiencia placentera.<br>
+                  Además, la velocidad de carga es excelente, lo cual mejora significativamente la usabilidad.</p>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+ <!-- Scripts -->
+
+
+  </body>
+</html>
+{% endblock contenido %}

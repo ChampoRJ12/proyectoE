@@ -1,0 +1,129 @@
+{% extends "contenido/BaseNavBar.html" %}
+
+{% block titulo %}Acerca de nosotros{% endblock titulo %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'edumocs/css/styles1.css' %}">
+
+
+
+
+
+{% block contenido %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+ 
+  <section style="background-color: #D6C4B3; padding-bottom: 50px;">
+      
+    <div class="clearfix" >
+      
+      
+      <h1 style="text-align:center; padding-top:60; padding-bottom:40px">NUESTRA HISTORIA</h1>
+      <img src="{% static 'edumocs/images/inicio1.png' %}" class="col-md-6 float-md-end mb-3 ms-md-3"  style="height: auto; width: 700px; margin-top: 60px; margin-bottom: 30px; padding-right:80; ">
+        
+          <p style="text-align: center; padding-top: 20px; padding-left:200; padding-right:500; padding-top:150; font-size:25px;" >
+            Edumocs fue fundada en 2024 con la visión de brindar experiencias de aprendizaje transformadoras 
+            a estudiantes de todo el mundo. 
+            Hoy en día, Edumocs es una plataforma global para el aprendizaje en línea y el desarrollo profesional
+            que ofrece a cualquier persona, en cualquier lugar, acceso a cursos y títulos en línea de universidades y empresas líderes. Edumocs
+            recibió la certificación B Corp en febrero de 2021, lo que significa que tenemos el deber legal no solo con nuestros accionistas, sino
+            también con tener un impacto positivo en la sociedad en general, a medida que continuamos nuestros esfuerzos para reducir las barreras
+            a la educación de clase mundial para todos.<br>
+          </p>
+        
+    
+    </div>
+    
+
+  </section>
+  <section style="text-align:center; padding-bottom: 50px;">
+    <div class="clearfix style=" >
+        <div style="text-align:center-aligned; padding-left:300; padding-right:300; " >
+            <h1 style="padding-top:80; ">NUESTRA MISION</h1>
+            <p style="font-size:25px;">
+              Edu Moocs tiene como misión ofrecer una educación en línea accesible y de alta calidad en el campo de las Tecnologías de la Información. 
+              Nos comprometemos a brindar a nuestros usuarios cursos académicos virtuales que no solo cubran las habilidades técnicas más demandadas, sino 
+              que también fomenten el crecimiento profesional y personal de cada estudiante. A través de una plataforma intuitiva, recursos educativos 
+              innovadores, y un soporte personalizado y en tiempo real, buscamos empoderar a nuestros estudiantes para que alcancen sus metas profesionales
+               y se conviertan en líderes en el mundo digital.
+            </p>
+        </div>
+       
+    </div>
+</section>
+
+    
+<section style="background:#CBCAC9;">
+  <div id="carouselExampleCaptions" class="carousel slide" style="background:#CBCAC9;">
+    <div class="carousel-indicators " style=":center; "  >
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="background:#CBCAC9;" ></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2" style="background:#CBCAC9;"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" style="background:#CBCAC9;"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="d-flex flex-column align-items-center">
+          <img src="{% static 'edumocs/images/perfil1.jpg' %}" class="rounded-circle" style="width: 200px; height: 200px; margin-bottom: 190px; margin-top: 80px;">
+          <div class="carousel-caption text-center" >
+            <h5 style="background:#CBCAC9; font-size:25; color:black;">Sebastian Rojas</h5>
+            <p style="font-size:20; margin-top:-20; color:black;">Estoy sumamente satisfecho con los cursos educativos desarrollados.<br>
+               La plataforma es intuitiva, los contenidos son de alta calidad y los instructores estan claramente bien preparados.<br>
+               Gracias a sus cursos, he podido avanzar significativamente en mi formacion y alcanzar mis objetivos.</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="d-flex flex-column align-items-center">
+          <img src="{% static 'edumocs/images/perfil3h.jpg' %}" class="rounded-circle" style="width: 200px; height: 200px; margin-bottom: 190px; margin-top: 80px;">
+          <div class="carousel-caption text-center">
+            <h5 style="background:#CBCAC9; font-size:25; color:black;">Enrique Lozano</h5>
+            <p style="font-size:20; margin-top:-20; color:black;">Los cursos ofrecidos en esta plataforma han superado mis expectativas.<br>
+              La interfaz es fácil de usar, el contenido es muy completo y los profesores son excelentes.<br>
+              He aprendido muchísimo y me siento más preparado para enfrentar nuevos desafíos profesionales.</p>
+           
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="d-flex flex-column align-items-center">
+          <img src="{% static 'edumocs/images/perfil6h.jpg' %}" class="rounded-circle" style="width: 200px; height: 200px; margin-bottom: 190px; margin-top: 80px;" >
+          <div class="carousel-caption text-center">
+            <h5 style="background:#CBCAC9; font-size:25px; text-align:center;color:black; ">Diego Arreguin</h5>
+            <p style="font-size:20px; color:black;">El diseño de la plataforma es impresionante y muy fácil de navegar.<br>
+              La estructura del sitio es clara y los colores son agradables a la vista, lo que hace que el aprendizaje sea una experiencia placentera.<br>
+              Además, la velocidad de carga es excelente, lo cual mejora significativamente la usabilidad.</p>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
+{% endblock contenido %}
