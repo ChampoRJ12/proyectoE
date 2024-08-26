@@ -13,5 +13,5 @@ pillow==10.3.0
 pip==24.2
 pycparser==2.22
 PyMySQL==1.1.1
-django-ckeditor-5==0.2.13
+django-ckeditor==6.7.1
 
